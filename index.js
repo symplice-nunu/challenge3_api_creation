@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import usersRoutes from './routes/albums.js';
 
 const app = express();
-const PORT = 1010;
+const PORT = process.env.PORT || 1010;
 
 app.use(bodyParser.json());
 app.use('/albums', usersRoutes);
